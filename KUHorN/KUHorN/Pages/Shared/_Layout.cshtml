@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+
+
+        nav-item a {
+            margin-left: auto;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            width: 20%;
+        }
+
+        nav {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+        }
+
+        footer {
+            background-color: #00579A;
+            text-align: center;
+            position: sticky;
+            font-family: serif;
+            font-weight: 900;
+            font-size: 120%;
+            display: flex;
+        }
+        .footer img {
+            height: 28px;
+            padding-bottom: 3px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-evenly;
+            padding: 5px;
+            background-color: #00579A;
+        }
+
+        nav_links {
+            display: flex;
+            justify-content: space-between;
+        }
+        li a {
+            color: #9ad3ff;
+        }
+            li a:hover {
+                color: #F0FFFF;
+            }
+        .navbar .navbar-brand {
+            padding-top: 0px;
+        }
+
+            .navbar .navbar-brand img {
+                height: 50px;
+
+            }
+        .navbar .navbar-item {
+            padding-top: 0px;
+        }
+
+        .navbar .navbar-item img {
+            height: 60px;
+            opacity: 1.0;
+        }
+        .navbar .navbar-item img:hover {
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+        <header>
+
+            <nav class="navbar navbar-collapse navbar-light">
+                <div class="navbar-brand"><img src="https://localhost:5001/images/Logo.jpeg" /></div>
+                <div class="navbar-item">
+                    <a href="http://kuaxo.com">
+                        <img id="ACO Logo" src="https://fraternitysororitysvg.com/assets/images/products/Alpha-Chi-Omega-crest.png" alt="ACO Logo" />
+                    </a>
+
+                </div>
+                <div class="navbar-item">
+                    <a href="http://www.kupanhellenic.com/alpha-delta-pi">
+                        <img id="ADP Logo" src="https://fraternitysororitysvg.com/assets/images/products/Alpha-Delta-Pi-crest.png"
+                             alt="ADP Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://twitter.com/agdku?lang=en">
+                        <img id="DP Logo"  src="https://upload.wikimedia.org/wikipedia/en/1/16/Alpha_Gamma_Delta_crest.png"
+                             alt="DP Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://ku.chiomega.com">
+                        <img id="CO logo" src="https://upload.wikimedia.org/wikipedia/en/e/eb/Chi_Omega_crest.png"
+                             alt="CO logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="http://ku.tridelta.org">
+                        <img id="DDD Logo" src="https://upload.wikimedia.org/wikipedia/en/4/4e/Delta_Delta_Delta_crest.png"
+                             alt="DDD Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://ku.deltagamma.org">
+                        <img id="DG Logo" src="https://upload.wikimedia.org/wikipedia/en/1/1d/Delta_Gamma_crest.png"
+                             alt="DG Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://www.gammaphibetaku.com">
+                        <img id="GPB Logo"  src="https://upload.wikimedia.org/wikipedia/en/b/bb/Gamma_Phi_Beta.png"
+                             alt="GPB Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://www.kappaalphatheta.org/find-a-chapter/college-chapters/kappa">
+                        <img id="KAT logo"  src="https://upload.wikimedia.org/wikipedia/en/b/b4/Kappa_Alpha_Theta_crest.png"
+                             alt="KAT logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://ku.kappadelta.org">
+                        <img id="KD logo"  src="https://upload.wikimedia.org/wikipedia/en/f/f9/Kappa_Delta_coat_of_arms.png"
+                             alt="KD logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://ku.kappa.org">
+                        <img id="KKG Logo"  src="https://upload.wikimedia.org/wikipedia/en/1/13/Kappa_Kappa_Gamma_crest.gif"
+                             alt="KKG Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://ku.pibetaphi.org">
+                        <img id="PTP Logo"  src="https://upload.wikimedia.org/wikipedia/en/6/62/Pi_Beta_Phi_crest.png"
+                             alt="PTP Logo" />
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="http://ku.sigmakappa.org">
+                        <img id="SK Logo" src="https://upload.wikimedia.org/wikipedia/en/b/bd/Sigma_Kappa_crest.png"
+                             alt="SK logo" />
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" data-toggle="collapse" data-target=".navbar-collapse">
+                    <ul class="navbar-nav-scroll mr-auto">
+                        <li class="nav-item" style="text-decoration:none">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/ScoreB">Leaderboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/TimeLine">Rules & About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/Disclaimer">Disclaimer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/Contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/Develop">Developer Opportunities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="font-family: serif; font-size: 100%; font-weight: bold;" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <footer class="footer text-light">
+            <div class="container">
+
+                Website by: <a style="color: #f8f9fa " asp-page="/Develop"><img src="https://localhost:5001/images/K.jpeg" />obraCoding</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+</body>
+</html>

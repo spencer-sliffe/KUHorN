@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{8F120044-DBD6-4E07-A698-2CE0B3762FC9}|Default">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D2205C9E-277A-46A3-B708-746948176922" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KUHorN/Pages/Index.cshtml">
+    <Files>
+      <File FileName="KUHorN/Pages/Shared/_Layout.cshtml" Line="43" Column="16" />
+      <File FileName="KUHorN/Pages/Index.cshtml" Line="1" Column="1" />
+      <File FileName="KUHorN/Pages/TimeLine.cshtml" Line="1" Column="1" />
+      <File FileName="KUHorN/Pages/Disclaimer.cshtml" Line="1" Column="1" />
+      <File FileName="KUHorN/Pages/Develop.cshtml" Line="1" Column="1" />
+      <File FileName="KUHorN/Pages/Contact.cshtml" Line="1" Column="1" />
+      <File FileName="KUHorN/Pages/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="KUHorN/wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="1" Column="1" />
+      <File FileName="KUHorN/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="KUHorN/Pages/Error.cshtml.cs" Line="1" Column="1" />
+      <File FileName="KUHorN/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" Line="1" Column="1" />
+      <File FileName="KUHorN/wwwroot/css/site.css" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KUHorN" expanded="True">
+            <Node name="KUHorN" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.KUHorN PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/spencersliffe/Desktop/Projects/KUHorN/KUHorN/wwwroot/lib/bootstrap/dist/css/bootstrap.css" relfile="KUHorN/wwwroot/lib/bootstrap/dist/css/bootstrap.css" line="144" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

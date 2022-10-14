@@ -1,0 +1,138 @@
+﻿@page
+@model KUHorN.Pages.IndexModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script type="text/javascript" async>let imgValS = window.localStorage.getItem("storedVals");
+        window.addEventListener('load', imgRandom, false);
+        window.addEventListener('load', imgRandom2, false);
+        if (imgValS) {
+            var imgVal = JSON.parse(imgValS);
+            window.localStorage.setItem('storedVals', JSON.stringify(imgVal));
+        } else {
+            imgVal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            window.localStorage.setItem('storedVals', JSON.stringify(imgVal));
+        }
+        var imgArray = ['0.jpeg', '1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg', '9.jpeg',
+            '10.jpeg', '11.jpeg', '12.jpeg', '13.jpeg', '14.jpeg', '15.jpeg', '16.jpeg', '17.jpeg', '18.jpeg', '19.jpeg',
+            '20.jpeg', '21.jpeg', '22.jpeg', '23.jpeg', '24.jpeg', '25.jpeg', '26.jpeg', '27.jpeg', '28.jpeg', '29.jpeg',
+            '30.jpeg', '31.jpeg', '32.jpeg', '33.jpeg', '34.jpeg', '35.jpeg', '36.jpeg', '37.jpeg', '38.jpeg', '39.jpeg',
+            '40.jpeg', '41.jpeg', '42.jpeg', '43.jpeg', '44.jpeg', '45.jpeg', '46.jpeg', '47.jpeg', '48.jpeg', '49.jpeg',
+            '50.jpeg', '51.jpeg', '52.jpeg', '53.jpeg', '54.jpeg', '55.jpeg', '56.jpeg', '57.jpeg', '58.jpeg', '59.jpeg',
+            '60.jpeg', '61.jpeg', '62.jpeg', '63.jpeg', '64.jpeg', '65.jpeg', '66.jpeg', '67.jpeg', '68.jpeg', '69.jpeg',
+            '70.jpeg', '71.jpeg', '72.jpeg', '73.jpeg', '74.jpeg', '75.jpeg', '76.jpeg', '77.jpeg', '78.jpeg', '79.jpeg',
+            '80.jpeg', '81.jpeg', '82.jpeg', '83.jpeg', '84.jpeg', '85.jpeg', '86.jpeg', '87.jpeg', '88.jpeg', '89.jpeg',
+            '90.jpeg', '91.jpeg', '92.jpeg', '93.jpeg', '94.jpeg', '95.jpeg', '96.jpeg', '97.jpeg', '98.jpeg', '99.jpeg',
+            '100.jpeg', '101.jpeg', '102.jpeg', '103.jpeg', '104.jpeg', '105.jpeg', '106.jpeg', '107.jpeg', '108.jpeg', '109.jpeg',
+            '110.jpeg', '111.jpeg', '112.jpeg', '113.jpeg', '114.jpeg', '115.jpeg', '116.jpeg', '117.jpeg', '118.jpeg', '119.jpeg',
+            '120.jpeg', '121.jpeg', '122.jpeg', '123.jpeg', '124.jpeg', '125.jpeg', '126.jpeg', '127.jpeg', '128.jpeg', '129.jpeg',
+            '130.jpeg', '131.jpeg', '132.jpeg', '133.jpeg', '134.jpeg', '135.jpeg', '136.jpeg', '137.jpeg', '138.jpeg', '139.jpeg',
+            '140.jpeg', '141.jpeg', '142.jpeg', '143.jpeg', '144.jpeg', '145.jpeg', '146.jpeg', '147.jpeg', '148.jpeg', '149.jpeg',
+            '150.jpeg', '151.jpeg', '152.jpeg', '153.jpeg', '154.jpeg', '155.jpeg', '156.jpeg', '157.jpeg', '158.jpeg', '159.jpeg',
+            '160.jpeg', '161.jpeg', '162.jpeg', '163.jpeg', '164.jpeg', '165.jpeg', '166.jpeg', '167.jpeg', '168.jpeg', '169.jpeg',
+            '170.jpeg', '171.jpeg', '172.jpeg', '173.jpeg', '174.jpeg', '175.jpeg', '176.jpeg', '177.jpeg', '178.jpeg', '179.jpeg',
+            '180.jpeg', '181.jpeg', '182.jpeg', '183.jpeg', '184.jpeg', '185.jpeg', '186.jpeg', '187.jpeg', '188.jpeg', '189.jpeg'];
+        window.localStorage.setItem('StrImages', JSON.stringify(imgArray));
+        var basePath = "https://localhost:5001/images/";
+        document.body.style.backgroundColor = "black";
+        var x1 = 0;
+        var x2 = 0;
+        var image = new Image();
+        var image2 = new Image();
+        function imgRandom() {
+            var j = Math.floor(Math.random() * imgArray.length);
+            x1 = j;
+            var rand = imgArray[j];
+            image.src = basePath + rand;
+            image.style.height = "58vh";
+            image.style.width = "30vw";
+            image.style.marginLeft = "11.1vw";
+            image.style.marginBottom = "4vh";
+            image.style.marginTop = "0px";
+            document.body.appendChild(image);
+        }
+
+        function imgRandom2() {
+            var basePath = "https://localhost:5001/images/";
+            var i = Math.floor(Math.random() * imgArray.length);
+            x2 = i;
+            var rand2 = imgArray[i];
+            image2.src = basePath + rand2;
+            image2.style.height = "58vh";
+            image2.style.width = "30vw";
+            image2.style.marginLeft = "16.7vw";
+            image2.style.marginBottom = "4vh";
+            image2.style.marginTop = "0px";
+            document.body.appendChild(image2);
+        }
+        function fImage() {
+            var data = window.localStorage.getItem('storedVals');
+            let imgVal = JSON.parse(data);
+            imgVal[x1] = imgVal[x1] + 10;
+            window.localStorage.setItem('storedVals', JSON.stringify(imgVal));
+        }
+
+        function sImage() {
+            var data = window.localStorage.getItem('storedVals');
+            let imgVal = JSON.parse(data);
+            imgVal[x2] = imgVal[x2] + 10;
+            window.localStorage.setItem('storedVals', JSON.stringify(imgVal));
+        }
+        imgRandom();
+        imgRandom2();</script>
+    <style>
+
+        .img-main {
+            width: 60%;
+            height: auto;
+            opacity: .5;
+            margin-bottom: 0px;
+            vertical-align:baseline;
+        }
+
+            .img-main:hover {
+                opacity: 1.0;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-6">
+                <img src="http://cdn.shopify.com/s/files/1/0258/6168/5301/collections/baddie_1200x1200.png?v=1563853907" class="img-main" style="margin-left: 2.5vw" onclick="fImage();imgRandom(); imgRandom2();" />
+            </div>
+            <div class="col-6">
+                <img src="http://cdn.shopify.com/s/files/1/0258/6168/5301/collections/baddie_1200x1200.png?v=1563853907" class="img-main" style="margin-left: 10vw" onclick="sImage(); imgRandom(); imgRandom2();" />
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

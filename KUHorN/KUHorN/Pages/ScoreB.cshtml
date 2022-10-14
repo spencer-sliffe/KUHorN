@@ -1,0 +1,126 @@
+﻿@page
+@model KUHorN.Pages.ScoreBModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script type="text/javascript" async>document.body.style.backgroundColor = "black";
+
+        let SImages = window.localStorage.getItem("StrImages");
+        var imgArr = JSON.parse(SImages);
+        let data = window.localStorage.getItem("storedVals");
+        var imgVals = JSON.parse(data);
+        var basePath = "https://localhost:5001/images/";
+        var imge = new Image();
+        var imge2 = new Image();
+        var imge3 = new Image();
+        imge.style.height = "58vh";
+        imge.style.width = "30vw";
+        imge2.style.height = "58vh";
+        imge2.style.width = "30vw";
+        imge3.style.height = "58vh";
+        imge3.style.width = "30vw";
+        imge.style.marginLeft = "2.2vw";
+        imge2.style.marginLeft = "2.5vw";
+        imge3.style.marginLeft = "2.5vw";
+        imge.style.marginBottom = "5px";
+        imge2.style.marginBottom = "5px";
+        imge3.style.marginBottom = "5px";
+        imge.style.marginTop = "5px";
+        imge2.style.marginTop = "5px";
+        imge3.style.marginTop = "5px";
+
+        window.addEventListener('load', displayImages, false);
+        function displayImages() {
+            var count = 0;
+            var index = 0;
+            var toBeat = 0;
+            var lessThan = 0;
+            var points1 = 0;
+            var points2 = 0;
+            var points3 = 0;            
+            do {
+                count = count + 1;
+                for (var i = 0; i <= imgArr.length; i++) {
+                    if (count == 1) {
+                        if (imgVals[i + 1] > imgVals[i] && imgVals[i + 1] > toBeat) {
+                            index = i + 1;
+                            toBeat = imgVals[i + 1];
+                        }
+                    } else if (count > 1) {
+                        if (imgVals[i + 1] > imgVals[i] && imgVals[i+1] < lessThan && imgVals[i+1] > toBeat) {
+                            index = i + 1;
+                            toBeat = imgVals[i + 1];
+                        }
+                    }
+                }
+                toBeat = 0;
+                lessThan = imgVals[index];
+                if (count == 1) {
+                    let rand = imgArr[index];
+                    imge.src = basePath + rand;
+
+                    (() => {
+                        points1 = imgVals[index];
+                        document.getElementById("myText").innerHTML = points1;
+                    })();
+
+                } else if (count == 2) {
+                    let rand = imgArr[index];
+                    imge2.src = basePath + rand;
+                    (() => {
+                        points2 = imgVals[index];
+                        document.getElementById("myText2").innerHTML = points2;
+                    })();
+                } else if (count == 3) {
+                    let rand = imgArr[index];
+                    imge3.src = basePath + rand;
+                    points3 = imgVals[index];
+                    (() => {
+                        points3 = imgVals[index];
+                        document.getElementById("myText3").innerHTML = points3;
+                    })();
+                }
+            } while (count < 3);
+
+            document.body.appendChild(imge);
+            document.body.appendChild(imge2);
+            document.body.appendChild(imge3);
+            let n1 = points1.toString();
+            let n2 = points2.toString();
+            let n3 = points3.toString();
+            
+        }
+        displayImages();</script>
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end" style="text-align:center">
+            <div class="col-12">
+                <p1 style="font-size: 4vw; font-family: serif; color:whitesmoke; text-align:center;">
+                    <u>Current Leaderboard</u>
+                </p1>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-4">
+                <p2 style="font-size: 2.3vw; font-family: serif; color:whitesmoke; text-align:center;">Points:  <span id="myText"></span></p2>
+            </div>
+            <div class="col-4">
+                <p2 style="font-size: 2.3vw; font-family: serif; color:whitesmoke; text-align:center; margin-left: 7vw">Points: <span id="myText2"></span></p2>
+            </div>
+            <div class="col-4">
+                <p2 style="font-size: 2.3vw; font-family: serif; color: whitesmoke; text-align: center; margin-left: 13vw; margin-right: 1vw">Points: <span id="myText3"></span></p2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
